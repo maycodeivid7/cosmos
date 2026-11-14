@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Explore a imagem astronômica do dia da NASA e descubra o universo."
+    />
+    <meta name="theme-color" content="#080d1a" />
+    <title>Diário do Cosmos | NASA APOD</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="Diário do Cosmos, início">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>DIÁRIO DO COSMOS</span>
+        </a>
+        <span class="header-note">UMA JANELA PARA O UNIVERSO</span>
+      </header>
+
+      <main>
+        <section class="intro" aria-labelledby="page-title">
+          <p class="eyebrow">ASTRONOMY PICTURE OF THE DAY</p>
+          <h1 id="page-title">O universo, <span>um dia de cada vez.</span></h1>
+          <p class="intro-copy">
+            Todo dia, uma nova história do cosmos. Escolha uma data e explore a
+            imagem astronômica selecionada pela NASA.
+          </p>
+        </section>
+
+        <form class="date-picker" id="date-form">
+          <div class="date-field">
+            <label for="apod-date-input">Escolha uma data</label>
+            <input id="apod-date-input" name="date" type="date" required />
+          </div>
+          <button class="submit-button" type="submit">
+            <span>Explorar o dia</span>
+            <span aria-hidden="true">↗</span>
+          </button>
+        </form>
+
+        <p class="loading-message" id="loading-message" role="status" hidden>
+          <span class="loading-indicator" aria-hidden="true"></span>
+          Buscando uma nova janela para o universo...
+        </p>
+        <p class="error-message" id="error-message" role="alert" hidden></p>
+
+        <article class="apod-card" id="apod-result" aria-labelledby="apod-title" hidden>
+          <div class="media-frame" id="apod-media"></div>
+          <div class="apod-copy">
+            <p class="apod-date" id="apod-date"></p>
+            <h2 id="apod-title"></h2>
+            <p class="apod-explanation" id="apod-explanation"></p>
+            <p class="source-note">
+              Conteúdo fornecido pela
+              <a href="https://apod.nasa.gov/apod/astropix.html" target="_blank" rel="noopener noreferrer">
+                NASA Astronomy Picture of the Day
+              </a>
+            </p>
+          </div>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <span>FEITO PARA QUEM OLHA PARA CIMA</span>
+        <span>UMA EXPLORAÇÃO DO COSMOS · NASA APOD</span>
+      </footer>
+    </div>
+  </body>
+</html>
